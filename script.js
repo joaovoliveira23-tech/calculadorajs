@@ -52,7 +52,7 @@ function calcularIMC() {
 
   const genero = sexo === 'masculino' ? 'Homem' : 'Mulher';
 
-  // Exibição do resultado
+  
   resultadoDiv.className = 'sucesso';
   resultadoDiv.style.display = 'block';
   resultadoDiv.innerHTML = `

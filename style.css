@@ -5,7 +5,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 body {
   background-color: #121214;
   color: #f8f9fa;
@@ -34,7 +33,6 @@ body.tema-feminino {
   --sombra-glow: rgba(255, 0, 127, 0.4);
   --sombra-forte: rgba(255, 0, 127, 0.8);
 }
-
 
 
 .container {
