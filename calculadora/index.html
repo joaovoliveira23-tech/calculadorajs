@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC Neon Dynamic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tema-masculino"> <!-- Tema inicial padrão -->
+
+  <div class="container">
+    <h1>Calculadora de IMC</h1>
+    
+    <div class="form-group">
+      <label for="sexo">Sexo:</label>
+      <!-- Chama a função alternarTema() a cada mudança no select -->
+      <select id="sexo" onchange="alternarTema()">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="peso">Peso (kg):</label>
+      <input type="text" id="peso" placeholder="Ex: 70.5 ou 70,5">
+    </div>
+
+    <div class="form-group">
+      <label for="altura">Altura (m):</label>
+      <input type="text" id="altura" placeholder="Ex: 1.75 ou 1,75">
+    </div>
+
+    <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

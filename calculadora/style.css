@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Transição suave de cores de fundo e textos para toda a página */
+body {
+  background-color: #121214;
+  color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.5s ease;
+}
+
+/* ===================================================
+   VARIAÇÕES DE TEMA (MASCULINO E FEMININO)
+   =================================================== */
+
+/* --- TEMA MASCULINO: Laranja Neon / Cyber Gold --- */
+body.tema-masculino {
+  --cor-primaria: #ff6600;        /* Laranja Neon principal */
+  --cor-secundaria: #ff3300;      /* Laranja escuro / Vermelho neon */
+  --cor-texto-label: #ff9933;     /* Laranja claro para textos */
+  --sombra-glow: rgba(255, 102, 0, 0.4);
+  --sombra-forte: rgba(255, 102, 0, 0.8);
+}
+
+/* --- TEMA FEMININO: Fúcsia / Magenta / Rosa Neon --- */
+body.tema-feminino {
+  --cor-primaria: #ff007f;        /* Fúcsia Neon principal */
+  --cor-secundaria: #d100d1;      /* Magenta */
+  --cor-texto-label: #ff66c4;     /* Rosa claro para textos */
+  --sombra-glow: rgba(255, 0, 127, 0.4);
+  --sombra-forte: rgba(255, 0, 127, 0.8);
+}
+
+/* ===================================================
+   ESTILOS DOS ELEMENTOS (USANDO AS VARIÁVEIS DO TEMA)
+   =================================================== */
+
+/* Card principal */
+.container {
+  background: #1a1a1e;
+  padding: 35px 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--sombra-glow);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
+              0 0 15px var(--sombra-glow);
+  transition: all 0.5s ease;
+}
+
+.container:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.9),
+              0 0 25px var(--sombra-glow);
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 8px var(--cor-primaria), 0 0 15px var(--cor-secundaria);
+  transition: text-shadow 0.5s ease;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--cor-texto-label);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 5px var(--sombra-glow);
+  transition: color 0.5s ease;
+}
+
+/* Campos de Input e Select */
+input, select {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #242429;
+  border: 2px solid #33333b;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Efeito de foco neon dinâmico nos inputs */
+input:focus, select:focus {
+  border-color: var(--cor-primaria);
+  background-color: #2a2a30;
+  box-shadow: 0 0 10px var(--sombra-glow), 
+              0 0 20px var(--sombra-glow);
+}
+
+select option {
+  background-color: #1a1a1e;
+  color: #ffffff;
+}
+
+/* Botão Neon Glamour */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px var(--sombra-glow);
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 20px var(--sombra-forte),
+              0 0 30px var(--sombra-glow);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Div de Resultado */
+#resultado {
+  margin-top: 25px;
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.sucesso {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--cor-primaria);
+  color: #ffffff;
+  box-shadow: inset 0 0 10px var(--sombra-glow),
+              0 0 15px var(--sombra-glow);
+  transition: all 0.5s ease;
+}
+
+.sucesso strong {
+  color: var(--cor-texto-label);
+}
+
+.erro {
+  background-color: rgba(255, 51, 51, 0.1);
+  border: 1px solid #ff3333;
+  color: #ff9999;
+  box-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
