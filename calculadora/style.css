@@ -5,7 +5,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Transição suave de cores de fundo e textos para toda a página */
 body {
   background-color: #121214;
   color: #f8f9fa;
@@ -17,33 +16,25 @@ body {
   transition: background-color 0.5s ease;
 }
 
-/* ===================================================
-   VARIAÇÕES DE TEMA (MASCULINO E FEMININO)
-   =================================================== */
 
-/* --- TEMA MASCULINO: Laranja Neon / Cyber Gold --- */
 body.tema-masculino {
-  --cor-primaria: #ff6600;        /* Laranja Neon principal */
-  --cor-secundaria: #ff3300;      /* Laranja escuro / Vermelho neon */
-  --cor-texto-label: #ff9933;     /* Laranja claro para textos */
+  --cor-primaria: #ff6600;        
+  --cor-secundaria: #ff3300;      
+  --cor-texto-label: #ff9933;     
   --sombra-glow: rgba(255, 102, 0, 0.4);
   --sombra-forte: rgba(255, 102, 0, 0.8);
 }
 
-/* --- TEMA FEMININO: Fúcsia / Magenta / Rosa Neon --- */
+
 body.tema-feminino {
-  --cor-primaria: #ff007f;        /* Fúcsia Neon principal */
-  --cor-secundaria: #d100d1;      /* Magenta */
-  --cor-texto-label: #ff66c4;     /* Rosa claro para textos */
+  --cor-primaria: #ff007f;        
+  --cor-secundaria: #d100d1;      
+  --cor-texto-label: #ff66c4;     
   --sombra-glow: rgba(255, 0, 127, 0.4);
   --sombra-forte: rgba(255, 0, 127, 0.8);
 }
 
-/* ===================================================
-   ESTILOS DOS ELEMENTOS (USANDO AS VARIÁVEIS DO TEMA)
-   =================================================== */
 
-/* Card principal */
 .container {
   background: #1a1a1e;
   padding: 35px 30px;
@@ -87,7 +78,7 @@ label {
   transition: color 0.5s ease;
 }
 
-/* Campos de Input e Select */
+
 input, select {
   width: 100%;
   padding: 12px 15px;
@@ -100,7 +91,7 @@ input, select {
   transition: all 0.3s ease;
 }
 
-/* Efeito de foco neon dinâmico nos inputs */
+
 input:focus, select:focus {
   border-color: var(--cor-primaria);
   background-color: #2a2a30;
@@ -113,7 +104,7 @@ select option {
   color: #ffffff;
 }
 
-/* Botão Neon Glamour */
+
 button {
   width: 100%;
   padding: 14px;
@@ -141,7 +132,7 @@ button:active {
   transform: translateY(1px);
 }
 
-/* Div de Resultado */
+
 #resultado {
   margin-top: 25px;
   padding: 18px;
