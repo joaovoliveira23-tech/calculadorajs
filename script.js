@@ -1,4 +1,4 @@
-// Função para mudar as cores da página de acordo com a opção selecionada no select "sexo"
+
 function alternarTema() {
   const sexo = document.getElementById('sexo').value;
   const body = document.body;
@@ -10,21 +10,21 @@ function alternarTema() {
   }
 }
 
-// Função para fazer o cálculo do IMC
+
 function calcularIMC() {
   const sexo = document.getElementById('sexo').value;
   const pesoInput = document.getElementById('peso').value;
   const alturaInput = document.getElementById('altura').value;
   const resultadoDiv = document.getElementById('resultado');
 
-  // Substitui vírgula por ponto
+  
   const pesoFormatado = pesoInput.replace(',', '.').trim();
   const alturaFormatada = alturaInput.replace(',', '.').trim();
 
   const peso = parseFloat(pesoFormatado);
   const altura = parseFloat(alturaFormatada);
 
-  // Validação dos dados digitados
+  
   if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
     resultadoDiv.className = 'erro';
     resultadoDiv.style.display = 'block';
@@ -32,10 +32,10 @@ function calcularIMC() {
     return;
   }
 
-  // Cálculo: IMC = peso ÷ (altura × altura)
+  
   const imc = peso / (altura * altura);
 
-  // Tabela de Classificação
+  
   let classificacao = '';
 
   if (imc < 18.5) {
